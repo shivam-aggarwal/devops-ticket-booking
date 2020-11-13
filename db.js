@@ -24,6 +24,42 @@ const Show_Details = db.define('shows', {
     }
 })
 
+const Registered_Users = db.define('users', {
+    user_id: {
+        type: Sequelize.INTEGER.UNSIGNED,
+        primaryKey: true,
+        autoIncrement: true
+    },
+    name: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    phone: {
+        type: Sequelize.BIGINT.UNSIGNED,
+        allowNull: false
+    }
+})
+
+const Tickets_Sold = db.define('tickets', {
+    ticket_id: {
+        type: Sequelize.INTEGER.UNSIGNED,
+        primaryKey: true,
+        autoIncrement: true
+    },
+    date: {
+        type: Sequelize.DATEONLY,
+        allowNull: false
+    },
+    time: {
+        type: Sequelize.TINYINT.UNSIGNED,
+        allowNull: false
+    },
+    user_id: {
+        type: Sequelize.INTEGER.UNSIGNED,
+        allowNull: false
+    }
+})
+
 db.sync()
     .then(() => console.log("Database Has Been Synced"))
     .catch((err) => console.error("Error Creating Database"))
