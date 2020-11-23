@@ -4,20 +4,20 @@
 *A REST Interface (API) For A Movie Theatre Booking System*
 
 #### Contents
- * [Requirements](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#requirements)
- * [Steps to Set-Up](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#steps-to-set-up-the-api-at-your-location-machine)
- * [Using The API](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#using-the-api)
- * [Database Structure](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#database-structure)
- * [Logic](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#logic)
- * [Test Cases & Screenshots For All Endpoints](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#test-cases--screenshots-for-all-endpoints)
-    * [Adding A New User](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#1-adding-new-user)
-    * [Book A Ticket : Endpoint-1](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#2-book-a-ticket-endpoint---1)
-    * [Update A Ticket : Endpoint-2](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#3-update-a-ticket-endpoint---2)
-    * [View All Tickets For A Particular Time : Endpoint-3](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#4-view-all-tickets-for-a-particular-time-endpoint---3)
-    * [Delete A Particular Ticket : Endpoint-4](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#5-delete-a-particular-ticket-endpoint---4)
-    * [View User Based On Ticket Id : Endpoint-5](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#6-view-users-detail-based-on-ticket-id-endpoint---5)
-    * [Max 20 Tickets For A Particular Show Date & Time : Note](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#7-maximum-20-tickets-can-be-booked-for-a-particular-time-note)
-    * [Automatically Delete Expired Tickets : Plus Point](https://github.com/the-stranded-alien/TTBS/blob/master/README.md#8-automatically-delete-expired-8-hours-old-tickets)
+ * [Requirements](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/README.md#requirements)
+ * [Steps to Set-Up](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/README.md#steps-to-set-up-the-api-at-your-location-machine)
+ * [Using The API](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/README.md#using-the-api)
+ * [Database Structure](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/README.md#database-structure)
+ * [Logic](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/README.md#logic)
+ * [Test Cases & Screenshots For All Endpoints](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/README.md#test-cases--screenshots-for-all-endpoints)
+    * [Adding A New User](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/README.md#1-adding-new-user)
+    * [Book A Ticket : Endpoint-1](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/README.md#2-book-a-ticket-endpoint---1)
+    * [Update A Ticket : Endpoint-2](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/README.md#3-update-a-ticket-endpoint---2)
+    * [View All Tickets For A Particular Time : Endpoint-3](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/README.md#4-view-all-tickets-for-a-particular-time-endpoint---3)
+    * [Delete A Particular Ticket : Endpoint-4](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/README.md#5-delete-a-particular-ticket-endpoint---4)
+    * [View User Based On Ticket Id : Endpoint-5](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/README.md#6-view-users-detail-based-on-ticket-id-endpoint---5)
+    * [Max 20 Tickets For A Particular Show Date & Time : Note](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/README.md#7-maximum-20-tickets-can-be-booked-for-a-particular-time-note)
+    * [Automatically Delete Expired Tickets : Plus Point](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/README.md#8-automatically-delete-expired-8-hours-old-tickets)
 
 ### Requirements
 This API is built using Node.js & it uses MySQL as the database. Requirements are as follows :
@@ -37,7 +37,7 @@ This API is built using Node.js & it uses MySQL as the database. Requirements ar
       * FLUSH PRIVILEGES;
    * Exit Shell.
    
-![Database Set-Up Help](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/SettingUpDatabase.png)
+![Database Set-Up Help](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/Testing_Screenshots/SettingUpDatabase.png)
 
  2. Saving code & downloading required packages at your system.
    * Download this repository and save the entire code at any directory.
@@ -48,7 +48,7 @@ This API is built using Node.js & it uses MySQL as the database. Requirements ar
  3. Running the Node application.
    * Open cmd in the same directory and write:
       * node server.js
-   * Your Localhost Server would be started at *http://localhost:1611/* (Given you Don't Change the PORT Number in Server.js)
+   * Your Localhost Server would be started at *http://localhost:1616/* (Given you Don't Change the PORT Number in Server.js)
  
 ### Using the API
 **Before checking out the API Methods, note these following points**
@@ -56,7 +56,7 @@ This API is built using Node.js & it uses MySQL as the database. Requirements ar
  * *You Can Book Tickets For Any Above Show Times For Any Given Date In The Future.*
 
 *List of all methods provided by this API and the way to use each of them is as follows:*
- 1. Booking a Ticket (Using a user's name, phone number, show date & time) *[ENDPOINT - 1]*
+ 1. Booking a Ticket (Using a user's name, phone number, show date & time)
    * Route -> /book_ticket/
    * HTTP Method -> POST
    * Parameters Needed In Request Body ->
@@ -64,25 +64,25 @@ This API is built using Node.js & it uses MySQL as the database. Requirements ar
      * phone : User Phone Number
      * time  : Show Time (Only Hour (HH) Value Like, 12, 15, 18, 21)
      * date  : Show Date (YYYY-MM-DD)
- 2. Updating a Ticket Timing (Using Ticket-Id, New Show Date & New Show Time) *[ENDPOINT - 2]*
+ 2. Updating a Ticket Timing (Using Ticket-Id, New Show Date & New Show Time)
    * Route -> /update_ticket/
    * HTTP Method -> POST
    * Parameters Needed In Request Body ->
      * ticket : Ticket Id for which time needs to be updated.
      * ndate  : New Show Date (YYYY-MM-DD)
      * ntime  : New Show Time (Only Hour (HH) Value)
- 3. View All the Tickets for a Particular Time (Using Show Date & Time) *[ENDPOINT - 3]*
+ 3. View All the Tickets for a Particular Time (Using Show Date & Time)
    * Route -> /view_tickets/
    * HTTP Method -> POST
    * Parameters Needed In Request Body ->
      * date  : Show Date (YYYY-MM-DD)
      * time  : Show Time (Only Hour (HH) Value)
- 4. Delete a Particular Ticket (Using Ticket Id) *[ENDPOINT - 4]*
+ 4. Delete a Particular Ticket (Using Ticket Id)
    * Route -> /delete_ticket/
    * HTTP Method -> DELETE
    * Parameters Needed In Request Body ->
      * ticket : Ticket Id for which Ticket Needs to be Deleted.
- 5. View the User's Detail Based On Ticket Id *[ENDPOINT - 5]*
+ 5. View the User's Detail Based On Ticket Id
    * Route -> /view_user/
    * HTTP Method -> POST
    * Parameters Needed In Request Body ->
@@ -139,71 +139,71 @@ This API is built using Node.js & it uses MySQL as the database. Requirements ar
 #### 1. Adding New User
 
 * Added new user with name 'Sahil' & phone number 7249999056.
-![Adding First User](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Adding_New_User.png)
+![Adding First User](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/Testing_Screenshots/Adding_New_User.png)
 
 * Added two more new users.
-![Adding Two More Users](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/After_Adding_2_More_Users.png)
+![Adding Two More Users](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/Testing_Screenshots/After_Adding_2_More_Users.png)
 
-#### 2. Book a Ticket (Endpoint - 1)
+#### 2. Book a Ticket
 
 * Booking The First Ticket
-![Booking First Ticket](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Booking_First_Ticket.png)
+![Booking First Ticket](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/Testing_Screenshots/Booking_First_Ticket.png)
 
 * Booking Few More Tickets
-![Booking Few More Tickets](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Booking_Few_More.png)
+![Booking Few More Tickets](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/Testing_Screenshots/Booking_Few_More.png)
 
 * Booking Ticket With A Date From Past (Error Message Shown)
-![Invalid Booking - Wrong Date](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Invalid_Booking_Past.png)
+![Invalid Booking - Wrong Date](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/Testing_Screenshots/Invalid_Booking_Past.png)
 
 * Booking Ticket With A Wrong Show Time (Error Message Shown)
-![Invalid Booking - Wrong Time](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Invalid_Booking_WrongTime.png)
+![Invalid Booking - Wrong Time](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/Testing_Screenshots/Invalid_Booking_WrongTime.png)
 
 * Booking Ticket With Unregistered User (Error Message Shown)
-![Invalid Booking - Unregistered User](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Invalid_Booking_Reg.png)
+![Invalid Booking - Unregistered User](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/Testing_Screenshots/Invalid_Booking_Reg.png)
 
-#### 3. Update a Ticket (Endpoint - 2)
+#### 3. Update a Ticket
 
 * Updating A Ticket (Query Made & Output Screen Before Refreshing) [**Time & Date For Ticket With Id 2 Changed**]
-![Update Before Refresh](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Update_Before_Refresh.png)
+![Update Before Refresh](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/Testing_Screenshots/Update_Before_Refresh.png)
 
 * Updating A Ticket (Query Made & Output Screen After Refreshing) [**Time & Date For Ticket With Id 2 Changed**]
-![Update After Refresh](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Update_After_Refresh.png)
+![Update After Refresh](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/Testing_Screenshots/Update_After_Refresh.png)
 
 * Updating A Ticket (Query Made & Output Screen After Refreshing) [**Time & Date For Ticket With Id 3 Changed**]
-![Another Update](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Another_Update.png)
+![Another Update](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/Testing_Screenshots/Another_Update.png)
 
-#### 4. View All Tickets For a Particular Time (Endpoint - 3)
+#### 4. View All Tickets For a Particular Time
 
 * Out Of All Tickets (Shown On Left - Browser) Only Ticket With Given Date & Time In Request Is Visible In Postman Body.
-![View Tickets](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/View_Tickets.png)
+![View Tickets](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/Testing_Screenshots/View_Tickets.png)
 
-#### 5. Delete a Particular Ticket (Endpoint - 4)
+#### 5. Delete a Particular Ticket
 
 * Deleting Ticket With Id 2 (Left Window Before Refreshing)
-![Delete Before Refresh](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Delete_Before_Refresh.png)
+![Delete Before Refresh](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/Testing_Screenshots/Delete_Before_Refresh.png)
 
 * Deleting Ticket With Id 2 (Left Window After Refreshing)
-![Delete After Refresh](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Delete_After_Refresh.png)
+![Delete After Refresh](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/Testing_Screenshots/Delete_After_Refresh.png)
 
-#### 6. View User's Detail Based On Ticket Id (Endpoint - 5)
+#### 6. View User's Detail Based On Ticket Id
 
 * Viewing User Information For Ticket Id 3 (Shown In Postman Body)
-![View User](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/View_User.png)
+![View User](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/Testing_Screenshots/View_User.png)
 
-#### 7. Maximum 20 Tickets Can Be Booked For a Particular Time (Note)
+#### 7. Maximum 20 Tickets Can Be Booked For a Particular Time
 
 * 20 Tickets Already Existed For Show At 15:00 On 2020-08-31
-![Max Before](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Max_20_Before.png)
+![Max Before](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/Testing_Screenshots/Max_20_Before.png)
 
 * So Making Another Booking For That Slot, Gave A Error Visible In Postman Window
-![Max After](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Max_20_After.png)
+![Max After](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/Testing_Screenshots/Max_20_After.png)
 
 #### 8. Automatically Delete Expired (8 Hours Old) Tickets
 
 *Although We Are Deleting Automatically At Exactly Time Difference Of 08:00:00 But For The Purpose Of Taking Screenshots We Have Changed Auto-Delete Time Difference To 08:40:00 For A While.*
 
 * At 05:39, Ticket Ids 23, 24, 25 Exists In All Tickets Table. Show Date : 2020-08-30 & Time : 21:00.
-![Auto-Delete Before](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Auto_Delete_Before.png)
+![Auto-Delete Before](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/Testing_Screenshots/Auto_Delete_Before.png)
 
-* According To Time Difference Of 08:40:00 (Only Taken To Ease Up Screenshoting Time) Tickets Of 21:00 on 30th Aug Should Be Deleted At 31st Aug 05:40. And At Exact 05:40, Ticket With Ids 23, 24, 25 Got Deleted Automatically. (Focus On Bottom-Right For Clock)
-![Auto-Delete After](https://github.com/the-stranded-alien/TTBS/blob/master/Screenshots/Auto_Delete_After.png)
+* According To Time Difference Of 08:40:00 (Only Taken To Ease Up Screenshoting Time) Tickets Of 21:00 on 30th Aug Should Be Deleted At 31st Aug 05:40. And At Exact 05:40, Ticket With Ids 23, 24, 25 Got Deleted Automatically.
+![Auto-Delete After](https://github.com/the-stranded-alien/devops-ticket-booking/blob/master/Testing_Screenshots/Auto_Delete_After.png)
